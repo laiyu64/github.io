@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TinyWebServer | laiyu64</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="topbar">
+      <a class="site-brand" href="../../index.html">宋来宇的个人主页</a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="../../index.html#about">个人简介</a>
+        <a href="../../index.html#college">大学资料</a>
+        <a href="../../index.html#projects">项目集</a>
+        <a href="../../index.html#diary">日记</a>
+      </nav>
+    </div>
+  </header>
+  <main class="post-page">
+    <header class="post-header">
+      <a class="post-back" href="../../index.html">返回首页</a>
+    </header>
+    <article class="post-article">
+      <p class="post-meta">项目集 / TinyWebServer</p>
+      <h1 class="post-title">TinyWebServer 项目记录</h1>
+      <p class="post-subtitle">TinyWebServer 是我当前重点学习和实践的 C++ 后端项目。通过这个项目，我希望系统理解 Linux 网络编程、HTTP 请求处理、线程池、epoll、多路复用、数据库连接池和日志系统等内容。</p>
+
+      <h2>项目学习目标</h2>
+      <ul>
+        <li>理解浏览器请求是如何进入服务器的。</li>
+        <li>理解 socket、bind、listen、accept 的基本流程。</li>
+        <li>理解 epoll 在高并发连接处理中的作用。</li>
+        <li>理解线程池如何处理客户端请求。</li>
+        <li>理解 HTTP 请求解析和响应生成过程。</li>
+        <li>理解 MySQL 在注册登录功能中的使用方式。</li>
+        <li>理解日志系统和定时器的作用。</li>
+      </ul>
+
+      <h2>当前进展</h2>
+      <p>目前已经完成项目环境搭建、基础编译运行、端口监听和浏览器访问测试。后续会继续整理源码阅读笔记，并尝试进行二次开发。</p>
+
+      <h2>计划改进</h2>
+      <ul>
+        <li>将数据库用户名、密码和数据库名改为配置文件读取。</li>
+        <li>补充项目运行截图和压测结果。</li>
+        <li>整理一份适合简历使用的项目介绍。</li>
+        <li>总结面试中可能被问到的问题。</li>
+      </ul>
+    </article>
+  </main>
+  <footer class="page-footer">
+    <p>&copy; 2026 宋来宇</p>
+  </footer>
+</body>
+</html>

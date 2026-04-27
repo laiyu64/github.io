@@ -1,0 +1,263 @@
+:root {
+  --bg: #f8f8f8;
+  --panel: #ffffff;
+  --text: #222222;
+  --muted: #6a6a6a;
+  --line: #e7e7e7;
+  --accent: #0f766e;
+  --accent-soft: #f2fbf9;
+  --shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+  --content-width: 980px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Noto Sans SC", "IBM Plex Sans", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(248, 248, 248, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.topbar {
+  width: min(var(--content-width), calc(100% - 24px));
+  margin: 0 auto;
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.site-brand {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.site-nav a {
+  color: var(--muted);
+  font-size: 0.96rem;
+  transition: color 180ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a.is-active {
+  color: var(--text);
+}
+
+.home-page,
+.post-page {
+  width: min(var(--content-width), calc(100% - 24px));
+  margin: 0 auto;
+  padding: 28px 0 56px;
+}
+
+.intro-panel,
+.post-article {
+  padding: 28px 30px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.intro-panel h1,
+.section-intro h2,
+.post-title,
+.post-item h3 {
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.intro-panel h1 {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.08;
+}
+
+.intro-panel p,
+.section-intro p,
+.post-item p,
+.post-article p,
+.post-article li {
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.intro-panel p {
+  margin: 18px 0 0;
+}
+
+.archive-section {
+  margin-top: 44px;
+}
+
+.section-intro {
+  margin-bottom: 18px;
+}
+
+.section-intro h2 {
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.section-intro p {
+  margin: 10px 0 0;
+}
+
+.post-list {
+  display: grid;
+  gap: 16px;
+}
+
+.post-item {
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.post-meta {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.post-item h3 {
+  margin-top: 8px;
+  font-size: 1.35rem;
+  line-height: 1.35;
+}
+
+.post-item h3 a:hover,
+.read-more:hover {
+  color: var(--accent);
+}
+
+.post-item p:last-of-type {
+  margin-bottom: 0;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent);
+  font-size: 0.94rem;
+}
+
+.post-header {
+  margin-bottom: 18px;
+}
+
+.post-back {
+  color: var(--accent);
+  font-size: 0.96rem;
+}
+
+.post-article {
+  box-shadow: var(--shadow);
+}
+
+.post-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.08;
+}
+
+.post-subtitle {
+  margin: 14px 0 0;
+  font-size: 1.02rem;
+}
+
+.post-article h2 {
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.35rem;
+}
+
+.post-article ul {
+  padding-left: 20px;
+}
+
+.post-article code {
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.page-footer {
+  width: min(var(--content-width), calc(100% - 24px));
+  margin: 0 auto;
+  padding: 0 0 40px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.back-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--text);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.back-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    gap: 12px 16px;
+  }
+
+  .intro-panel,
+  .post-item,
+  .post-article {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
