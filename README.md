@@ -8,7 +8,7 @@
 
 ## 发布方式
 
-1. 在 GitHub 新建仓库：`laiyu64.github.io`
+1. 在 GitHub 新建仓库：'https://laiyu64.github.io/laiyu64-github.io/'
 2. 把当前目录文件推送到该仓库默认分支
 3. 在仓库 `Settings -> Pages` 中确认已启用 GitHub Pages
 4. 访问 `https://laiyu64.github.io/`
