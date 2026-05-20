@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>2026 JSCPC 复盘 | laiyu64</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="topbar">
+      <a class="site-brand" href="../../index.html">宋来宇的个人主页</a>
+
+      <nav class="site-nav" aria-label="主导航">
+        <a href="../../index.html#about">个人简介</a>
+        <a href="../../index.html#college">大学资料</a>
+        <a href="../../index.html#projects">项目集</a>
+        <a href="../../index.html#diary">日记</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="post-page">
+    <header class="post-header">
+      <a class="post-back" href="./contest-review.html">返回比赛复盘</a>
+    </header>
+
+    <article class="post-article">
+      <p class="post-meta">JSCPC / 赛事复盘</p>
+
+      <h1 class="post-title">JSCPC 复盘</h1>
+
+      <p class="post-subtitle">
+        本次比赛从签到题到复杂题的整个过程，以及队伍的心态、代码问题和赛后总结。
+      </p>
+
+      <p>
+        本次比赛整个过程都有些赶和慌，主要是主力在写第一个签到题竟然吃了一发罚时，导致节奏乱了。最后打铁也是意料之内。
+      </p>
+
+      <h2>题目分配与过程</h2>
+      <p>
+        我们先写 C 和 I，在 C 就已经吃了一发罚时。我发现 F 有些熟悉，之前航电训练时遇到过 mex，因此开始构思 F。另一部分队友开 A，但提交后直接 RE（赛后才发现 cmp 的 return 写成了 <=，应为 <）。
+      </p>
+
+      <p>
+        我确定 F 思路后开始写 F，WA 一发后发现可以循环组合形成更大的数，调试完成后成功 AC。随后尝试 L（博弈论题），可惜四小时仍未完成。队友在 A 题上没想到二分要扩大范围，因为默认第一秒必然放，导致未 AC。
+      </p>
+
+      <h2>问题与教训</h2>
+      <ul>
+        <li><strong>心态管理：</strong>开局吃罚时、RE、WA 等影响团队节奏，容易打铁。</li>
+        <li><strong>代码细节：</strong>RE 原因是 cmp 返回值错误，赛前可以做小规模测试避免低级错误。</li>
+        <li><strong>题目分配：</strong>分配思路基本正确，但需注意队员熟悉度和潜在陷阱。</li>
+        <li><strong>思路确认：</strong>F 的熟悉技巧及时发现，L 博弈题需提前练习积累。</li>
+      </ul>
+
+      <h2>改进建议</h2>
+      <ol>
+        <li>赛前心态训练：模拟比赛环境，给每题限定时间。</li>
+        <li>代码提交策略：对易出错函数做小测试，遇到 RE/WA 冷静分析再改。</li>
+        <li>团队协作：明确题目分工，专人检查边界条件和低级错误。</li>
+        <li>题型积累：F、L 类题赛前多练，熟悉策略和状态表示。</li>
+      </ol>
+
+      <p>
+        总体来说，队伍的 AC 率和思路发现能力不错，只是心态和细节导致一些罚时和打铁。赛后重点总结心态控制、边界/函数细节和团队分工策略，会让下一次比赛更加稳健。
+      </p>
+    </article>
+  </main>
+
+  <footer class="page-footer">
+    <p>&copy; 2026 宋来宇</p>
+  </footer>
+</body>
+</html>
